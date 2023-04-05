@@ -1,5 +1,5 @@
 import os
-import pickle
+import pickle as pkl
 
 # NOTE: for local testing only, do NOT deploy with your key hardcoded
 os.environ['OPENAI_API_KEY'] = "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"
@@ -39,6 +39,7 @@ def query_index(query_text):
 
 
 def insert_into_index(doc_file_path, doc_id=None):
+    print("hello")
     """Insert new document into global index."""
     global index, stored_docs
     document = SimpleDirectoryReader(input_files=[doc_file_path]).load_data()[0]
